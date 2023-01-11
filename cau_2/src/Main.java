@@ -6,11 +6,13 @@ public class Main {
         products[2] = new Product("003", "Iphone", 15000, 1, 4);
         products[3] = new Product("004", "vSmart", 20000, 1, 6);
         products[4] = new Product("005", "Nokia", 25000, 1, 8);
+
         System.out.println("Danh sách sản phẩm : ");
         for (Product i : products
         ) {
             System.out.println(i);
         }
+
         System.out.println("Tổng tiền SP chưa có khuyến mãi : " + sum(products));
         System.out.println("Tổng tiền SP sau khuyến mãi : " + sale(products));
         System.out.println("Tổng tiền SP chênh lệch sau khuyến mãi : " + sumSale(products));
