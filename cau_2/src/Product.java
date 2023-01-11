@@ -1,23 +1,24 @@
 public class Product {
-    private int code;
+    private String code;
     private String name;
     private double price;
-    private double amount;
+    private int number;
     private double sale;
 
-    public Product(int code, String name, double price, int amount, double sale) {
+
+    public Product(String code, String name, double price, int number, double sale) {
         this.code = code;
         this.name = name;
         this.price = price;
-        this.amount = amount;
+        this.number = number;
         this.sale = sale;
     }
 
-    public int getCode() {
+    public String getCode() {
         return code;
     }
 
-    public void setCode(int code) {
+    public void setCode(String code) {
         this.code = code;
     }
 
@@ -37,12 +38,12 @@ public class Product {
         this.price = price;
     }
 
-    public double getAmount() {
-        return amount;
+    public int getNumber() {
+        return number;
     }
 
-    public void setAmount(int amount) {
-        this.amount = amount;
+    public void setNumber(int number) {
+        this.number = number;
     }
 
     public double getSale() {
@@ -53,23 +54,23 @@ public class Product {
         this.sale = sale;
     }
 
-    public double total(){
-        return this.price* this.amount;
+    public double total() {
+        return this.price * this.number;
     }
 
 
     public double sale() {
-        return (this.price-(this.price*this.sale/100))*this.amount;
+        return (this.price - (this.price * this.sale / 100)) * this.number;
     }
 
 
     @Override
     public String toString() {
         return
-                        "mã SP :" + code +
-                        ", ten SP :'" + name + '\'' +
+                "mã SP :" + code +
+                        ", tên SP :" + name +
                         ", giá SP :" + price +
-                        ", số lượng :" + amount +
+                        ", số lượng :" + number +
                         ", khuyến mãi :" + sale + " %";
     }
 }
