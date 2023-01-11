@@ -59,11 +59,7 @@ public class Product {
 
 
     public double sale() {
-        return total()-(total()*this.sale/100);
-    }
-
-    public double totalSale(){
-        return sale()-total();
+        return (this.price-(this.price*this.sale/100))*this.amount;
     }
 
 
